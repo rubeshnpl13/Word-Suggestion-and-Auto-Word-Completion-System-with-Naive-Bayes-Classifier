@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import "./footer.css";
+import { Link } from 'react-router-dom';
+import './footer.css';
 function Footer() {
   return (
     <div>
@@ -11,10 +11,18 @@ function Footer() {
               <Link to="https://twitter.com" className="ms-3" target="_blank">
                 <i className="bi bi-twitter"></i>
               </Link>
-              <Link to="https://facebook.com" className="ms-3" target="_blank">
+              <Link
+                to="https://www.facebook.com/nishanta.nepal.33/"
+                className="ms-3"
+                target="_blank"
+              >
                 <i className="bi bi-facebook"></i>
               </Link>
-              <Link to="https://instagram.com" className="ms-3" target="_blank">
+              <Link
+                to="https://www.instagram.com/nishantnepal_0/"
+                className="ms-3"
+                target="_blank"
+              >
                 <i className="bi bi-instagram"></i>
               </Link>
             </div>
