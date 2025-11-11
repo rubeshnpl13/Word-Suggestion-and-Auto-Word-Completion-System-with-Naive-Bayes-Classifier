@@ -5,3 +5,4 @@
 /.idea
 /.vscode
 /backend/.env
+.DS_Store
