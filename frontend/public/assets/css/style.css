@@ -1,0 +1,4 @@
+#carouselExampleControlsNoTouching .carousel-item img {
+    height: 95vh; /* 90% of viewport height */
+    object-fit: cover; /* to keep the image aspect ratio */
+}

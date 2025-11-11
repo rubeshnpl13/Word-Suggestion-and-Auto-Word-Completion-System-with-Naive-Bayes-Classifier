@@ -1,0 +1,9 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+}
+.text-white {
+  margin-left: 10px;
+  margin-top: 2px;
+}
