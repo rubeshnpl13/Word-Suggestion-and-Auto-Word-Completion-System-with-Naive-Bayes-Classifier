@@ -1,64 +1,105 @@
-How to Run Locally
-1) Prerequisites
-Node.js v14+ (recommend current LTS)
-MongoDB (local instance or a cloud URI like MongoDB Atlas)
-Python (only if backend calls a Python script for predictions) and required Python packages
-2) Setup
-Clone repository
-git clone <repo-url>
-cd AutoWord-Detection-System
-Install frontend dependencies
+# Word Suggestions API (Project report on github repo)
 
-cd frontend
-npm install
-Install backend dependencies
+A Node.js backend that provides predictive word suggestions using a Naive Bayes classifier that learns and adapts over time.
 
-cd ../backend
-npm install
-Configure backend environment
+---
 
-Create a .env file in backend/ (if required) with:
-MONGODB_URI=<your-mongodb-connection-string>
-Add any other required variables found in the backend code (e.g., PORT, JWT_SECRET, PYTHON_SCRIPT_PATH)
-If Python is used:
-Install dependencies (example): pip install -r requirements.txt (if the file exists)
-Ensure the backend’s config/path to the Python script or model matches your local paths
-3) Start Servers
-Start backend
-cd backend
-npm start
-Start frontend
+## ## Prerequisites
 
-Open a new terminal tab/window
-cd frontend
-npm start
-Access the app
+Before you begin, ensure you have the following software installed on your local machine.
 
-Open: http://localhost:3000
-Note: The frontend dev server runs on port 3000 by default (React). If the port is occupied, React may prompt to use another port.
-4) Troubleshooting
-Frontend cannot reach backend (CORS or 404)
-Verify backend is running (default port often 5000 or from .env)
-Ensure frontend API base URL points to the backend (e.g., http://localhost:5000)
-MongoDB connection errors
+1.  **Node.js (via nvm)**
+    - This project requires a specific version of Node.js. It is highly recommended to use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) to manage Node versions and avoid compatibility issues.
 
-Confirm MONGODB_URI is correct and MongoDB is running
-For local: mongodb://127.0.0.1:27017/<db-name>
-Python script not found or missing packages
+2.  **MongoDB**
+    - The application requires a running MongoDB database instance. Please [install MongoDB Community Edition](https://www.mongodb.com/try/download/community) and ensure the database service is running on the default port (`27017`).
 
-Check PYTHON_SCRIPT_PATH or similar env/config
-Install Python deps in the same environment you’re using to run the script
-5) Scripts Reference (adjust if different in package.json)
-Backend
-npm start → starts the server
-npm run dev → starts with nodemon (if configured)
-Frontend
+3.  **Git**
+    - You will need [Git](https://git-scm.com/downloads) to clone the repository.
 
-npm start → starts the React dev server
-npm run build → production build
-6) Environment Variables Example (backend/.env)
-Example
-PORT=5000
-MONGODB_URI=mongodb://127.0.0.1:27017/autoword
-PYTHON_SCRIPT_PATH=../model-training/predict.py (only if used)
-JWT_SECRET=replace-with-strong-secret (if authentication exists)
+---
+
+## ## Getting Started
+
+Follow these steps to get your development environment set up and running.
+
+1.  **Clone the Repository**
+    - Open your terminal and clone the project from GitHub.
+    ```bash
+    git clone https://github.com/your-username/your-repository-name.git
+    ```
+
+2.  **Navigate to the Project Directory**
+    ```bash
+    cd your-repository-name
+    ```
+
+3.  **Set the Correct Node.js Version**
+    - Use `nvm` to install and use the Long-Term Support (LTS) version of Node, which is what this project uses.
+    ```bash
+    nvm install --lts
+    nvm use --lts
+    ```
+    - **Pro-Tip:** You can create a file named `.nvmrc` in the project root with the node version (e.g., `lts/iron`) so that you can just run `nvm use` in the future.
+
+4.  **Install Dependencies**
+    - Install all the required `npm` packages defined in the `package.json` file.
+    ```bash
+    npm install
+    ```
+
+---
+
+## ## Environment Variables (.env)
+Create a .env file in the project root before running the server. You can copy from a provided example if available.
+
+Create from template
+If .env.example exists:
+cp .env.example .env
+Required keys and examples
+PORT=3000
+DATABASE_URL=mongodb://127.0.0.1:27017/word-suggestion
+ACCESS_TOKEN_SECRET=replace-with-a-long-random-string
+REFRESH_TOKEN_SECRET=replace-with-another-long-random-string
+DEFAULT_PASSWORD=optional-default-password
+
+## ## Running the Application
+
+1.  **Start the Development Server**
+    - This command will start the server using `nodemon`, which automatically restarts the application whenever file changes are detected.
+    ```bash
+    npm run dev
+    ```
+
+2.  **Verify the Server is Running**
+    - Once the server starts, you should see the following confirmation messages in your terminal:
+    ```
+    Server running on port 3000
+    MongoDB Connected: 127.0.0.1
+    ```
+    - The API is now ready to accept requests at `http://localhost:3000`.
+
+---
+
+## ## API Endpoints
+
+Here is a list of the available API endpoints.
+
+| Method | Endpoint        | Description                          |
+| :----- | :-------------- | :----------------------------------- |
+| `GET`  | `/api/words`    | Fetches a list of all words.         |
+| `POST` | `/api/words`    | Adds a new word to the database.     |
+| `GET`  | `/api/words/:id`| Fetches a single word by its ID.   |
+
+*(**Note:** This is an example. Update this table with your actual API endpoints.)*
+
+---
+
+## ## Technologies Used
+
+- **Node.js**: JavaScript runtime environment.
+- **Express.js**: Web framework for Node.js.
+- **MongoDB**: NoSQL database for storing data.
+- **Mongoose**: Object Data Modeling (ODM) library for MongoDB and Node.js.
+- **Nodemon**: Utility for auto-restarting the server during development.
+
