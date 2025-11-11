@@ -1,4 +1,4 @@
-# Word Suggestions API (Project report on github repo)
+# Word Suggestions System (Project thesis report available on github repo)
 
 A Node.js backend that provides predictive word suggestions using a Naive Bayes classifier that learns and adapts over time.
 
