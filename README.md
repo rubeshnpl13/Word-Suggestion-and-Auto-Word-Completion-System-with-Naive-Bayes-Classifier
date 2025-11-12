@@ -103,3 +103,18 @@ Here is a list of the available API endpoints.
 - **Mongoose**: Object Data Modeling (ODM) library for MongoDB and Node.js.
 - **Nodemon**: Utility for auto-restarting the server during development.
 
+
+
+## ## 
+<img width="1435" height="772" alt="8" src="https://github.com/user-attachments/assets/61623cfc-76d4-4ade-9320-b11ea4070f34" />
+<img width="1435" height="772" alt="7" src="https://github.com/user-attachments/assets/cd1e8e25-1508-48b2-9822-b8593ac1e843" />
+<img width="1435" height="772" alt="6" src="https://github.com/user-attachments/assets/2c8c9827-a434-4d99-8dd9-65b30cf61fac" />
+<img width="1435" height="772" alt="5" src="https://github.com/user-attachments/assets/f4351ea0-0b80-4823-8f7e-d9837d384b82" />
+<img width="1435" height="772" alt="4" src="https://github.com/user-attachments/assets/5ba3181c-72d2-44d9-a04f-ad088b69aa2f" />
+<img width="1435" height="772" alt="3" src="https://github.com/user-attachments/assets/ba022a3b-334b-45f8-bd33-f6bcf4b43d2e" />
+<img width="1435" height="772" alt="2" src="https://github.com/user-attachments/assets/84f5551a-1377-4a11-b2ce-ac0a28cd25db" />
+<img width="1435" height="772" alt="1" src="https://github.com/user-attachments/assets/bf33db4e-31af-4f08-81e8-453b031862a5" />
+<img width="1435" height="772" alt="Screenshot 2025-11-12 at 09 25 55" src="https://github.com/user-attachments/assets/bdaef5c9-cdea-4ea7-b37c-f65882600c13" />
+<img width="1435" height="772" alt="Screenshot 2025-11-12 at 09 25 30" src="https://github.com/user-attachments/assets/7052d5b1-5408-4206-acc9-41e81aafe8d5" />
+
+
